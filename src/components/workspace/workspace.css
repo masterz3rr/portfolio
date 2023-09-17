@@ -1,0 +1,47 @@
+.workspace {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.workspace_content {
+    width: 50%;
+}
+
+.specs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.specs_item {
+    width: 45%;
+    min-height: 340px;
+    margin: 5px;
+    border: 1px solid rgba(255,255,255,0.1);
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.specs_item div {
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: 200;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    padding: 0 20px;
+}
+
+.specs_item img {
+    width: auto;
+    height: 150px;
+}
