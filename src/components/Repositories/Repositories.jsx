@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import './repositories.css'
 import { FaJs, FaCss3 } from "react-icons/fa6";
+import { images } from '../../constants'
 
 const Repositories = () => {
 
@@ -32,11 +33,28 @@ const Repositories = () => {
 
     return (
         <div className='repositories section'>
-            <div className='repo_title'>
-                <h4>My Projects</h4>
-                <p>The following projects are fetched right from my Github account using AXIOS and Github REST API.</p>
+            <div className="main-repo">
+                <div className='repo_title'>
+                    <h4>My Works</h4>
+                    <p>The following projects are fetched right from my Github account using AXIOS and Github REST API.</p>
+
+                </div>
+                <div className='floater float-repo'>
+                        <img src={images.arrow} alt="arrow-float" />
+                        <p>University Official Website</p>
+                    </div>
+                <div className="main-project">
+                    
+                    <img src={images.bisu} alt="bisu" />
+                </div>
+
+
             </div>
+
             <div className='repo_list_container'>
+                <div className="repo_list_container_content">
+                    <p>The following projects are fetched right from my Github account using AXIOS and Github REST API.</p>
+                </div>
                 <div className='repo_list'>
                     {users.map((user, index) => {
                         return user.topics[0] === "portfolio-project" ? (

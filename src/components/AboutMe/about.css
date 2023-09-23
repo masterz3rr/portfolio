@@ -39,19 +39,18 @@
 .about_container p {
     font-family: 'Source Code Pro', monospace;
     font-weight: 400;
-    color: #cecece;
+    color: var(--color-text);
 }
 
 .about_container h1 {
-    font-family: 'Whisper', cursive;
+    font-family: 'Gasoek One', sans-serif;
     margin-top: 0px;
     font-weight: 100;
-    color: #d63031;
-    font-size: 7rem;
+    color: var(--color-header);
+    font-size: 5rem;
     line-height: 0;
     margin-left: -80px;
     z-index: 1;
-    transform: rotate(-10deg);
 }
 
 .about_container button {
@@ -62,4 +61,58 @@
     font-size: 1rem;
     color: #d63031;
     font-family: 'Inter', sans-serif;
+}
+
+.floater {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    bottom: 50px;
+    right: -120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: float 2s linear infinite;
+}
+
+@keyframes float {
+    0% {
+
+        transform: rotate(0deg);
+    }
+
+    25% {
+
+        transform: rotate(5deg);
+    }
+    50% {
+        
+        transform: rotate(0deg);
+    }
+    75% {
+        
+        transform: rotate(-5deg);
+    }
+
+    100% {
+
+        transform: rotate(0deg);
+    }
+}
+
+.floater p {
+    color: #cecece;
+    bottom: 250px;
+    right: -170px;
+    margin-top: -40px;
+    font-family: 'Whisper', cursive;
+    font-size: 3rem;
+}
+
+.floater img {
+    width: 150px;
+    height: 150px;
+    filter: hue-rotate(0deg) invert(80%);
+    transform: rotate(95deg);
 }

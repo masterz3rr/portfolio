@@ -7,10 +7,14 @@ const About = () => {
     <div className="about_section section" id="about">
       <div className="about_image">
         <img src={images.myimage} alt="background" />
+        <div className='floater'>
+          <img src={images.arrow} alt="arrow-float" />
+          <p>Meet Jerry!</p>
+        </div>
       </div>
       <div className="about_container">
-        <h1>Meet Jerry !</h1>
-        <p>Hi, I'm Jerry Ale, a FrontEnd Developer from the Philippines.
+        <h1>My Profile</h1>
+        <p>Hi, I'm Jerry Ale, a FrontEnd Developer from the Bohol, Philippines.
           I've been working in FrontEnd development in both mobile and responsive
           web platforms
           for more than 5 years. </p>

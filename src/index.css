@@ -1,2 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&family=Source+Code+Pro:wght@200&display=swap');
+
+:root {
+    --color-bg: #200c4a;
+    --color-footer: #031B34;
+    --color-blog: #042C54;
+    --color-text: #cecece;
+    --color-subtext: #FF8A71;
+    --color-header: #d63031;
+
+    --font-code: 'Source Code Pro', monospace;
+    --font-header:  'Gasoek One', sans-serif;
+}
+
+
+
