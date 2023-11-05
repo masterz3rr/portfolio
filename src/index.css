@@ -7,12 +7,21 @@
     --color-footer: #031B34;
     --color-blog: #042C54;
     --color-text: #cecece;
+    --color-text-light: #2e2e2e;
     --color-subtext: #FF8A71;
     --color-header: #d63031;
 
     --font-code: 'Source Code Pro', monospace;
     --font-header:  'Gasoek One', sans-serif;
+    --font-default:  'Inter';
+    --magnifier: 6;
+    --transition: 0.5s;
 }
 
 
+.container {    
+    width: 1200px;
+    height: fit-content;
+    margin: 0 auto 0;
+}
 

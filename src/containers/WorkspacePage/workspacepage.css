@@ -1,0 +1,128 @@
+.workspacepage {
+    height: 300px;
+    width: 1200px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 0;
+}
+
+.workspacepage h1 {
+    bottom: 0;
+    position: absolute;
+    font-size: 5rem;
+    color: var(--color-header);
+    font-family: var(--font-header);
+    font-weight: 100;
+    margin: 0 auto 0;
+}
+
+.gallery {
+    width: 1200px;
+    height: 40vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap);
+    margin: 0 auto 0;
+}
+
+.gallery img {
+    --brightness: 0.75;
+    --grayscale: 1;
+    transition: flex var(--transition), filter var(--transition);
+    height: 100%;
+    filter: grayscale(var(--grayscale)) brightness(var(--brightness));
+    object-fit: cover;
+    overflow: hidden;
+    flex: 1;
+}
+
+.gallery img:hover {
+    --brightness: 1.15;
+    --grayscale: 0;
+    flex: var(--magnifier);
+}
+
+.content-header h4 {
+    border-left: 5px solid #d63031;
+    padding: 15px 20px;
+    width: fit-content;
+    border-top-left-radius: 10px;
+}
+
+#light .content-header h4 {
+    color: var(--color-text-light);
+}
+#dark .content-header h4 {
+    color: var(--color-text);
+}
+
+#light .page-container h3 {
+    color: var(--color-text-light);
+}
+
+#dark .page-container h3 {
+    color: var(--color-text);
+}
+
+.tagline {
+    margin: 30px auto 30px;
+    font-size: 2rem;
+}
+
+
+.specs-container {
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.specs_item {
+    width:580px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.specs_item .details {
+    margin: 20px;
+    width: 350px;
+}
+
+ .specs_item {    
+    background-color: #fcfcfc;
+}
+
+.specs_item img {
+    width: 170px;
+    height: auto;
+}
+
+
+
+.details p {
+    color: var(--color-text-light);
+}
+
+.details h3 {
+    color: var(--color-text-light) !important;
+}
+
+.profile img {
+    width: 300px;
+    pointer-events: none;
+}
+
+.aboutpage {
+    display: flex;
+}
+
+.content {
+    padding: 0 40px;
+}

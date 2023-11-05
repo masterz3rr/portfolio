@@ -1,13 +1,13 @@
 import React from 'react'
 import './hero.css';
-import {images} from '../../constants'
+import { ThemeContext } from '../../App';
 
-const Hero = () => {
+const Hero = (theme) => {
     return (
+        <ThemeContext.Provider value={{theme}}>
         <div className='hero'> 
-            <img src={images.herobg} alt="background" className='hero-bg'/>
-            <main className="container">
-                <p>Hello I AM</p>
+            <main className="hero-container">
+                <p className='hello'>Hello I AM</p>
                 <section className="animation">
                     <div className="first"><div>Jerry Ale</div></div>
                     <div className="second"><div>A FRONTEND DEVELOPER</div></div>
@@ -28,6 +28,7 @@ const Hero = () => {
                 </a>
             </main>
         </div>
+    </ThemeContext.Provider>
     )
 }
 

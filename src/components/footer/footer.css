@@ -7,18 +7,24 @@
 }
 
 .footer h1 {
-    color: #fff;
     font-weight: 100;
 }
+#light .footer h1 {
+    color: var(--color-text-light);
+}
 
+#dark .footer h1 {
+    color: var(--color-text);
+}
 .footer h3 {
     font-family: 'Inter', sans-serif;
     font-weight: 100;
     color: #d63031;
 }
 
+
+
 .footer svg {
-    color: #aaaaaa;
     margin: 0 20px;
     font-size: 30px;
     cursor: pointer;
@@ -27,4 +33,12 @@
 
 .footer svg:hover {
     color: #fff;
+}
+
+#light .footer svg {
+    color: var(--color-text-light);
+}
+
+#dark .footer svg {
+    color: var(--color-text);
 }

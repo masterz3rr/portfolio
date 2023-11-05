@@ -4,7 +4,7 @@ import './repositories.css'
 import { FaJs, FaCss3 } from "react-icons/fa6";
 import { images } from '../../constants'
 
-const Repositories = () => {
+const Repositories = ({ aosright, aosleft }) => {
 
     const [users, setUsers] = useState([
     ]);
@@ -33,19 +33,27 @@ const Repositories = () => {
 
     return (
         <div className='repositories section'>
-            <div className="main-repo">
-                <div className='repo_title'>
+            <div className="main-repo" data-aos={aosright}>
+                <div className='repo_title' >
                     <h4>My Works</h4>
-                    <p>The following projects are fetched right from my Github account using AXIOS and Github REST API.</p>
-
+                    <p>I work as an IT Instructor and a Management Information System Officer in a State University in the Province of Bohol for
+                        more than 4 years. My responsibility as the MIS Officer is to develop, design and maintain the university's
+                        official website and other web portals.
+                    </p>
+                    <p>
+                        This website promotes transparency of the university by providing information and
+                        resources to prospective and current students, faculty and staff, alumni and in the
+                        general public which ought to be informative and engaging.
+                    </p>
+                    <button className='primary_btn' >Visit the website</button>
                 </div>
-                <div className='floater float-repo'>
+
+                <div className="main-project" data-aos={aosleft}>
+                    <div className='floater float-repo' >
                         <img src={images.arrow} alt="arrow-float" />
                         <p>University Official Website</p>
                     </div>
-                <div className="main-project">
-                    
-                    <img src={images.bisu} alt="bisu" />
+                    <img src={images.bisu} alt="bisu" className='laptop'/>
                 </div>
 
 

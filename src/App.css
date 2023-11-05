@@ -1,3 +1,89 @@
 .section {
-    padding: 160px 120px;
+    padding: 100px 120px;
+}
+
+#light .mainContent {
+    background-color: #f0f0f0; 
+}
+
+#dark .mainContent {
+    background-color: #131417; 
+}
+
+body {
+    font-family:'Roboto';
+    margin: 0 auto 0;
+  }
+
+.primary_btn {
+    margin-top: 40px;
+    padding: 10px 15px;
+    font-family: var(--font-code);
+    font-weight: 600;
+    color: var(--color-header);
+    background: none;
+    border: 1px solid var(--color-header);
+    font-size: 1rem;
+    transition: 0.2s ease-in;
+    cursor: pointer;
+}
+
+.primary_btn:hover {
+    background: var(--color-header);
+    color: var(--color-text);
+}
+
+
+
+.title {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+}
+
+.navTitle h1,
+.navTitle p {
+    padding: 0;
+    margin: 0;
+}
+
+
+.links ul {
+    list-style: none;
+    display: flex;  
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.links a {
+    margin-right: 50px;
+    font-family: var(--font-code);
+    text-decoration: none;
+}
+
+.links {
+    display: flex;
+}
+.links img {
+    width: 20px;
+}
+
+.links li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+#dark .links a {
+    color: var(--color-text);
+}
+
+
+#light .links a {
+    color: var(--color-text-light);
 }

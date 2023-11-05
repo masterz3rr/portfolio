@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
 
 .about_section {
+    padding-top: 160px;
     display: flex;
     height: 600px;
-    width: inherit;
+    width: 1200px;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin: 0 auto 0;
 }
 
 .about_image {
@@ -39,7 +41,13 @@
 .about_container p {
     font-family: 'Source Code Pro', monospace;
     font-weight: 400;
+}
+#dark .about_container p{
     color: var(--color-text);
+}
+
+#light .about_container p {
+    color: var(--color-text-light);
 }
 
 .about_container h1 {
@@ -53,23 +61,14 @@
     z-index: 1;
 }
 
-.about_container button {
-    background: none;
-    outline: none;
-    border: none;
-    font-weight: 100;
-    font-size: 1rem;
-    color: #d63031;
-    font-family: 'Inter', sans-serif;
-}
-
 .floater {
-    width: 200px;
+    width: max-content;
     height: 200px;
     position: relative;
     bottom: 50px;
     right: -120px;
     display: flex;
+    text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -102,17 +101,28 @@
 }
 
 .floater p {
-    color: #cecece;
-    bottom: 250px;
-    right: -170px;
     margin-top: -40px;
     font-family: 'Whisper', cursive;
     font-size: 3rem;
 }
 
+#light .floater p {
+    color: var(--color-text-light);
+}
+
+#dark .floater p {
+    
+  color: var(--color-text);
+}
+#light .floater img {
+    filter: none;
+}
+
+#dark .floater img {
+    filter: hue-rotate(0deg) invert(80%);
+}
 .floater img {
     width: 150px;
     height: 150px;
-    filter: hue-rotate(0deg) invert(80%);
     transform: rotate(95deg);
 }
