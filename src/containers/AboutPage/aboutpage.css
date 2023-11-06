@@ -113,7 +113,7 @@
   /* Setting the border of top, bottom, left */
   .card:nth-child(odd)::before {
     left: 0px;
-    top: -4.5px;
+    top: -5.5px;
     bottom: -4.5px;
     border-width: 5px 0 5px 5px;
     border-radius: 50px 0 0 50px;
@@ -184,7 +184,7 @@
     position: absolute;
     width: 10px;
     height: 10px;
-    background: white;
+    background: var(--color-header);
     border-radius: 999px;
     border: 3px solid var(--color-header);
   }
@@ -203,3 +203,13 @@
   .card:nth-child(even) > .info > .title::before {
     right: -45px;
   }
+
+.card p,
+.card h3 {
+  color: var(--color-text-light) !important;
+}
+
+.card p {
+  font-size: 1rem !important;
+  margin-bottom: 0px;
+}

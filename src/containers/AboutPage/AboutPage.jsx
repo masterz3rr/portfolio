@@ -80,10 +80,16 @@ const AboutPage = ({ theme, setTheme }) => {
           <h4 className='profileTitle'>My Timeline</h4>
           <div class="timeline">
             <div class="outer">
+              
               <div class="card">
                 <div class="info">
                   <h3 class="title">Learning Management System Chairperson<span>(2020 - Present) Bohol Island State University Balilihan Campus</span></h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                  <p>In response to the pandemic that emerged in the early 2020s, traditional education 
+                    systems and teaching methodologies were forced to rapidly evolve to maintain quality 
+                    education. Blended learning became essential, and universities maximized the use of 
+                    learning management systems. </p>
+                    <p>I successfully planned, developed, and managed the learning management system for 
+                      our campus and university, achieving 100% utilization across all classes.</p>
                 </div>
               </div>
               <div class="card">
@@ -106,14 +112,18 @@ const AboutPage = ({ theme, setTheme }) => {
               </div>
               <div class="card">
                 <div class="info">
-                  <h3 class="title">Web Developer Intern<span>(2015) Bohol Island State University</span></h3>
+                  <h3 class="title">Bachelors Degree in Information Technology<span>(2016) Bohol Island State University</span></h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                 </div>
               </div>
               <div class="card">
                 <div class="info">
                   <h3 class="title">Web Developer Intern<span>(2015) Auza.net Software Development and Services</span></h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+                  <p>My internship as part of the BSIT curriculum has given me a glimpse 
+                    into the real-world of web development, preparing me for my future career as a 
+                    web developer. I gained valuable hands-on experience in using real-world frameworks 
+                    like WordPress and server side programming language PHP to develop dynamic websites.
+                     Some of the projects we worked includes government websites, e-commerce websites, and booking websites.</p>
                 </div>
               </div>
             </div>
