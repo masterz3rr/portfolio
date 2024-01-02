@@ -20,30 +20,6 @@
 }
 
 
-.workspace_image {
-    width: 50%;
-    height: 600px;
-    overflow: hidden;
-    background-color: #000;
-}
-
-.workspace_image img {
-    height: 600px;
-    opacity: 0.8;
-}
-
-.workspace_imghover {
-    overflow: hidden;
-}
-
-.workspace_imghover img {
-    width: 100%;
-    transition: 0.3s ease-in-out;
-}
-
-.workspace_imghover img:hover {
-    transform: scale(1.1);
-}
 
 .workspace_content {
     justify-content: center;

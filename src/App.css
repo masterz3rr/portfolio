@@ -18,7 +18,7 @@ body {
 .primary_btn {
     margin-top: 40px;
     padding: 10px 15px;
-    font-family: var(--font-code);
+    font-family: var(--font-default);
     font-weight: 600;
     color: var(--color-header);
     background: none;
@@ -86,4 +86,33 @@ body {
 
 #light .links a {
     color: var(--color-text-light);
+}
+
+.headTag {
+    font-family: 'Gasoek One', sans-serif;
+    color: var(--color-header);
+    font-size: 5rem;
+}
+
+@media screen and (max-width:900px) {
+    .headTag {
+        font-size: 3rem;
+    }
+}
+
+.contentTag {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+}
+
+#light .interFont {
+    color: var(--color-text-light);
+}
+
+#dark .interFont {
+    color: var(--color-text);
+}
+
+.interFont {
+    font-family: 'Inter', sans-serif;
 }

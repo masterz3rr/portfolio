@@ -1,0 +1,36 @@
+.nav-link img {
+    height: 20px;
+    width: 20px;
+}
+
+.contain-small {
+    backdrop-filter: blur(90px);
+}
+
+#light .hamburger {
+    color: var(--color-text-light);
+}
+
+#dark .hamburger {
+    color: var(--color-text);
+}
+
+.link-mobile {
+    color: var(--color-text);
+    border:none;
+    background-color: var(--color-header) !important;
+}
+
+.link-mobile:hover {
+    color: var(--color-header) !important;
+}
+
+
+
+#light .navTitle {
+    color: var(--color-text-light);
+}
+
+#dark .navTitle {
+    color: var(--color-text);
+}

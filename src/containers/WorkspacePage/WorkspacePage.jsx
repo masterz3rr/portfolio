@@ -1,13 +1,11 @@
 import React from 'react'
 import './workspacepage.css'
-import Navbar from '../../components/Navbar/Navbar'
 import { images } from '../../constants'
 
 const WorkspacePage = ({ theme, setTheme }) => {
 
   return (
     <div>
-      <Navbar theme={theme} setTheme={setTheme} />
 
       <div className='workspacepage'>
         <h1>My Workspace</h1>

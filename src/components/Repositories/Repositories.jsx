@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import './repositories.css'
-import { FaJs, FaCss3 } from "react-icons/fa6";
+import { FaJs, FaCss3, FaHtml5 } from "react-icons/fa6";
 import { images } from '../../constants'
 
-const Repositories = ({ aosright, aosleft }) => {
+const Repositories = ({ aosup, aosleft }) => {
 
     const [users, setUsers] = useState([
     ]);
@@ -17,6 +17,30 @@ const Repositories = ({ aosright, aosleft }) => {
         return newdateString;
     }
 
+    const truncateText = (text, length) => {
+        if (text.split(' ').length > length) {
+           return text.split(' ').slice(0, length).join(' ') + '...';
+        }
+        return text;
+       };
+
+    const truncateUrl = (url, length = 40) => {
+        if (url.length > length) {
+           return url.slice(0, length) + '...';
+        }
+        return url;
+       };
+       
+    function displayLanguageIcon(language) {
+        switch (language) {
+           case 'JavaScript':
+             return <FaJs />;
+           case 'CSS':
+             return <FaCss3 />;
+           default:
+             return <FaHtml5 />;
+        }
+       }
 
     useEffect(() => {
         const fetchAllUsers = async () => {
@@ -32,15 +56,15 @@ const Repositories = ({ aosright, aosleft }) => {
     }, [])
 
     return (
-        <div className='repositories section'>
-            <div className="main-repo" data-aos={aosright}>
-                <div className='repo_title' >
-                    <h4>My Works</h4>
-                    <p>I work as an IT Instructor and a Management Information System Officer in a State University in the Province of Bohol for
+        <div className='container block mx-auto px-4 pb-4 overflow-hidden'>
+            <div className="block md:flex pb-32" data-aos={aosup}>
+                <div className='w-full md:w-1/2 text-center md:text-left'  >
+                    <h4 className='headTag mt-24'>My Works</h4>
+                    <p className='interFont'>I work as an IT Instructor and a Management Information System Officer in a State University in the Province of Bohol for
                         more than 4 years. My responsibility as the MIS Officer is to develop, design and maintain the university's
                         official website and other web portals.
                     </p>
-                    <p>
+                    <p className='interFont mt-6'>
                         This website promotes transparency of the university by providing information and
                         resources to prospective and current students, faculty and staff, alumni and in the
                         general public which ought to be informative and engaging.
@@ -48,49 +72,45 @@ const Repositories = ({ aosright, aosleft }) => {
                     <button className='primary_btn' >Visit the website</button>
                 </div>
 
-                <div className="main-project" data-aos={aosleft}>
+                <div className="w-full md:w-1/2" data-aos={aosleft}>
                     <div className='floater float-repo' >
-                        <img src={images.arrow} alt="arrow-float" />
+                        <img src={images.arrow} alt="arrow-float"/>
                         <p>University Official Website</p>
                     </div>
-                    <img src={images.bisu} alt="bisu" className='laptop'/>
+                    <img src={images.bisu} alt="bisu" className='laptop mt-8 lg:mt-8'/>
                 </div>
 
 
             </div>
 
-            <div className='repo_list_container'>
-                <div className="repo_list_container_content">
-                    <p>The following projects are fetched right from my Github account using AXIOS and Github REST API.</p>
+            <div className='block repo_list_container py-16'>
+                <div className="repo_list_container_content py-16 text-center md:text-left">
+                    <p className='interFont'>The following projects are fetched right from my Github account using AXIOS and Github REST API.</p>
                 </div>
                 <div className='repo_list'>
-                    {users.map((user, index) => {
+                    {users.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at)).map((user, index) => {
                         return user.topics[0] === "portfolio-project" ? (
-                            <div key={index} className='repo_content'>
+                            <div key={index} className='repo_content m-3'>
 
                                 <img className='preview' alt='screenshot' src={`https://github.com/masterz3rr/${user.name}/raw/main/screenshot.png`} />
                                 <div className='card_content'>
                                     <img src={user.owner.avatar_url} alt="avatar" className='avatar' />
-                                    <div className='card_content_title'>
-                                        <h2>{user.name}</h2>
-                                        <p>{user.html_url}</p>
+                                    <div className='card_content_title ml-2'>
+                                        <h2 className='mb-4 interFont font-bold'>{user.name}</h2>
+                                        <a href={user.html_url} target='_blank' rel="noreferrer"><p className='my-1 interFont'>{truncateUrl(user.html_url)}</p></a>
                                     </div>
                                 </div>
-                                <div className='repo_content_body'>
-                                    <p>{user.description}</p>
+                                <div className='repo_content_body mt-6 pb-4'>
+                                    <p className='interFont'>{truncateText(user.description, 20)}</p>
                                 </div>
 
                                 <div className='repo_content_footer'>
-                                    <div className='lang'>
+                                    <div className='lang interFont'>
                                         <p>
-                                            {
-                                                user.language === 'JavaScript' ?
-                                                    <FaJs />
-                                                    : <FaCss3 />
-                                            }</p>
+                                        {displayLanguageIcon(user.language)}</p>
                                         <p>{user.language}</p>
                                     </div>
-                                    <p>{getDate(user.created_at)}</p>
+                                    <p className='interFont'>{getDate(user.created_at)}</p>
                                 </div>
                             </div>
                         )

@@ -5,12 +5,12 @@ import { ThemeContext } from '../../App';
 const Hero = (theme) => {
     return (
         <ThemeContext.Provider value={{theme}}>
-        <div className='hero'> 
+        <div className='hero' id="hero"> 
             <main className="hero-container">
-                <p className='hello'>Hello I AM</p>
+                <p className='text-5xl md:text-7xl mb-0 md:mb-[20px]'>Hello I AM</p>
                 <section className="animation">
                     <div className="first"><div>Jerry Ale</div></div>
-                    <div className="second"><div>A FRONTEND DEVELOPER</div></div>
+                    <div className="second"><div>A UI/UX DESIGNER</div></div>
                     <div className="third"><div>A WEB DEVELOPER</div></div>
                 </section>
 

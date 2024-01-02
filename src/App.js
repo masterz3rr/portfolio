@@ -10,6 +10,7 @@ import AboutPage from './containers/AboutPage/AboutPage';
 import HomePage from './containers/HomePage/HomePage';
 import Projects from './containers/Projects/Projects';
 import WorkspacePage from './containers/WorkspacePage/WorkspacePage';
+import Header from './components/Header/Header';
 
 
 export const ThemeContext = createContext(null);
@@ -26,6 +27,7 @@ function App() {
       <ThemeContext.Provider value={{ theme, setTheme }}>
         <div className="App" id={theme}>
           <div className='mainContent'>
+            <Header theme={theme} setTheme={setTheme} />
             <Routes>
               <Route path="/" element={<HomePage theme={theme} setTheme={setTheme} />} />
               <Route path="/about" element={<AboutPage theme={theme} setTheme={setTheme} />} />

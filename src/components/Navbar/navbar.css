@@ -7,11 +7,11 @@
     font-weight: 400;
 }
 
-#light .navTitle a {
+#light .navTitle {
     color: var(--color-text-light);
 }
 
-#dark .navTitle a {
+#dark .navTitle {
     color: var(--color-text);
 }
 
