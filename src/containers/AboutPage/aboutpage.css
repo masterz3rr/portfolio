@@ -82,22 +82,22 @@
     padding: 20px;
   }
   
-  /* Card container */
-  .card {
+  /* cards container */
+  .cards {
     position: relative;
     max-width: auto;
-    padding: 30px;
+    padding: 0px;
   }
   
   /* setting padding based on even or odd */
-  .card:nth-child(odd) {
+  .cards:nth-child(odd) {
     padding: 30px 0 30px 30px;
   }
-  .card:nth-child(even) {
+  .cards:nth-child(even) {
     padding: 30px 30px 30px 0;
   }
   /* Global ::before */
-  .card::before {
+  .cards::before {
     content: "";
     position: absolute;
     width: 50%;
@@ -105,7 +105,7 @@
   }
   
   /* Setting the border of top, bottom, left */
-  .card:nth-child(odd)::before {
+  .cards:nth-child(odd)::before {
     left: 0px;
     top: -5.5px;
     bottom: -4.5px;
@@ -115,14 +115,14 @@
   
   /* Setting the top and bottom to "-5px" because earlier it was out of a pixel in mobile devices */
   @media only screen and (max-width: 400px) {
-    .card:nth-child(odd)::before {
+    .cards:nth-child(odd)::before {
       top: -5px;
       bottom: -5px;
     }
   }
   
   /* Setting the border of top, bottom, right */
-  .card:nth-child(even)::before {
+  .cards:nth-child(even)::before {
     right: 0;
     top: 0;
     bottom: 0;
@@ -130,20 +130,20 @@
     border-radius: 0 50px 50px 0;
   }
   
-  /* Removing the border if it is the first card */
-  .card:first-child::before {
+  /* Removing the border if it is the first cards */
+  .cards:first-child::before {
     border-top: 0;
     border-top-left-radius: 0;
   }
   
-  /* Removing the border if it is the last card  and it's odd */
-  .card:last-child:nth-child(odd)::before {
+  /* Removing the border if it is the last cards  and it's odd */
+  .cards:last-child:nth-child(odd)::before {
     border-bottom: 0;
     border-bottom-left-radius: 0;
   }
   
-  /* Removing the border if it is the last card  and it's even */
-  .card:last-child:nth-child(even)::before {
+  /* Removing the border if it is the last cards  and it's even */
+  .cards:last-child:nth-child(even)::before {
     border-bottom: 0;
     border-bottom-right-radius: 0;
   }
@@ -154,56 +154,56 @@
     flex-direction: column;
     background: #fff;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    color: gray;
+    color: #2e2e2e;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px 10px;
   }
   
-  /* Title of the card */
-  .title {
+  /* titles of the cards */
+  .titles {
     color: var(--color-header);
     position: relative;
     font-size: 1.2rem !important;
   }
 
-  .title span {
+  .titles span {
     font-size: 0.8rem;
     font-weight: 400;
     color: var(--color-header);
   }
 
   /* Timeline dot  */
-  .title::before {
+  .titles::before {
     content: "";
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
     background: var(--color-header);
     border-radius: 999px;
     border: 3px solid var(--color-header);
   }
   
-  /* text right if the card is even  */
-  .card:nth-child(even) > .info > .title {
+  /* text right if the cards is even  */
+  .cards:nth-child(even) > .info > .titles {
     text-align: right;
   }
   
-  /* setting dot to the left if the card is odd */
-  .card:nth-child(odd) > .info > .title::before {
-    left: -45px;
+  /* setting dot to the left if the cards is odd */
+  .cards:nth-child(odd) > .info > .titles::before {
+    left: -47px;
   }
   
-  /* setting dot to the right if the card is odd */
-  .card:nth-child(even) > .info > .title::before {
-    right: -45px;
+  /* setting dot to the right if the cards is odd */
+  .cards:nth-child(even) > .info > .titles::before {
+    right: -47px;
   }
 
-.card p,
-.card h3 {
+.cards p,
+.cards h3 {
   color: var(--color-text-light) !important;
 }
 
-.card p {
+.cards p {
   font-size: 1rem !important;
   margin-bottom: 0px;
 }
@@ -211,4 +211,17 @@
  .tooltip:hover img {
   transform: scale(1.2);
   transition: transform 300ms ease-in-out;
+ }
+
+ .contact-icon svg{
+   height: 2em;
+   width: 2em;
+ }
+
+ #light .contact-icon {
+  color: var(--color-text-light);
+ }
+
+ #dark .contact-icon {
+  color: var(--color-text);
  }

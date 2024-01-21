@@ -7,7 +7,7 @@ const Hero = (theme) => {
         <ThemeContext.Provider value={{theme}}>
         <div className='hero' id="hero"> 
             <main className="hero-container">
-                <p className='text-5xl md:text-7xl mb-0 md:mb-[20px]'>Hello I AM</p>
+                <p className='text-5xl md:text-7xl mb-0 md:mb-[20px] hero-text'>Hello I AM</p>
                 <section className="animation">
                     <div className="first"><div>Jerry Ale</div></div>
                     <div className="second"><div>A UI/UX DESIGNER</div></div>

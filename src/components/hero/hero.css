@@ -97,6 +97,13 @@
   opacity: 0.3;
 }
 
+#light .hero-text {
+  color: var(--color-text-light);
+}
+#dark .hero-text {
+  color: var(--color-text);
+}
+
 #mouse-scroll {
   display: block;
 }
