@@ -101,7 +101,7 @@ const Repositories = ({ aosup, aosleft }) => {
                                     </div>
                                 </div>
                                 <div className='repo_content_body mt-6 pb-4'>
-                                    <p className='interFont'>{truncateText(user.description, 20)}</p>
+                                    <p className='interFont'>{truncateText(user.description, 25)}</p>
                                 </div>
 
                                 <div className='repo_content_footer'>
