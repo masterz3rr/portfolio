@@ -87,7 +87,7 @@ const Repositories = ({ aosup, aosleft }) => {
                 <div className="repo_list_container_content py-16 text-center md:text-left">
                     <p className='interFont'>The following projects are fetched right from my Github account using AXIOS and Github REST API.</p>
                 </div>
-                <div className='repo_list'>
+                <div className='repo_list grid d-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4'>
                     {users.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at)).map((user, index) => {
                         return user.topics[0] === "portfolio-project" ? (
                             <div key={index} className='repo_content m-3'>

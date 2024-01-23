@@ -13,8 +13,8 @@ const Footer = () => {
         <h1>Let's talk here!</h1>
 
         <div className='flex mt-6'>
-            <FaEnvelope />
-            <FaLinkedinIn/>
+            <a href="mailto:alejerry24@gmail.com"><FaEnvelope /></a>
+            <a href="https://www.linkedin.com/in/jerryale/" target='_blank' rel='noreferrer'><FaLinkedinIn/></a>
         </div>
     </div>
   )

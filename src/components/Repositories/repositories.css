@@ -101,8 +101,6 @@
     margin: 60px auto;
 }
 .repo_list {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
 }

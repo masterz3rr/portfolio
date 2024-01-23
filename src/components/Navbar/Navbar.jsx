@@ -10,7 +10,7 @@ const Navbar = ({ theme, setTheme }) => {
   }
   return (
       <>
-       <nav class="navbar navbar-light">
+       <nav class="container navbar navbar-light">
         <Link className="logo" to={"/"}><img src={images.logo} alt="" width={"50px"}/><span>Jerry Ale</span></Link> 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>

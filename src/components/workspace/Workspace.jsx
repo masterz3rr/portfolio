@@ -11,7 +11,7 @@ const Workspace = ({theme, aosup}) => {
                 <img src={images.pcsetA} alt="html" className='transition ease-in-out hover:scale-125 '/>
             </div>
             <div data-aos={aosup} className="flex w-full md:pr-44 md:w-1/2 text-center md:text-left px-4 justify-center align-middle ">
-                <div class="flex items-center justify-center align-middle">
+                <div className="flex items-center justify-center align-middle">
                     <div className="block">
                         <h1 className='headTag'>My Workspace</h1>
                         <p className='interFont'>Work form home ready workspace where I make all of my project for
